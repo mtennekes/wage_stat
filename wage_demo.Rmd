@@ -1,0 +1,54 @@
+---
+title: "Wage demo"
+author: "Martijn Tennekes"
+date: "2025-02-06"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("01_raw/read_write_raw.R")
+```
+
+### About wage dataset
+
+It's a dataset about wages. 
+
+
+### Read the data
+
+Let's read the data and assign it to `w`.
+
+```{r}
+w <- read_raw("01_raw/Wage.csv")
+```
+
+It contains `r nrow(w)` rows and contains the following columns:
+
+```{r}
+names(w)
+```
+
+### Summary statistics
+
+```{r}
+summary(w)
+```
+
+### Show me the data!
+
+```{r, echo=FALSE}
+knitr::kable(head(w))
+```
+
+### Scatter plot
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+ggplot(w, aes(x = age, y = wage)) +
+	geom_point(size = 0.1)
+```
+

@@ -53,3 +53,4 @@ rsconnect/
 02_input/*.csv
 02_input/*.rds
 
+*.html
