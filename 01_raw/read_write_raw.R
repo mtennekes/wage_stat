@@ -10,7 +10,7 @@
 #' df <- read_raw()
 #' head(df)
 read_raw <- function(file = NULL, use_csv2 = FALSE) {
-	fls <- list.files("wage_stat/01_raw", pattern = ".csv", full.names = TRUE)
+	fls <- list.files("01_raw", pattern = ".csv", full.names = TRUE)
 	
 	if (length(fls) == 0) {
 		stop("No csv files found")

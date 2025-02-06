@@ -1,7 +1,11 @@
+source("01_raw/read_write_raw.R")
+
 # raw
-df <- read_raw(file = "wage_stat/01_raw/Wages.csv")
-write_raw(df, file = "wage_stat/02_input/Wage_input")
+df <- read_raw(file = "01_raw/Wage.csv")
+
+dir.create("02_input")
+write_raw(df, file = "02_input/Wage_input")
 
 # input
-df2 <- readRDS("wage_stat/02_input/Wage_input.rds")
+df2 <- readRDS("02_input/Wage_input.rds")
 
