@@ -1,0 +1,5 @@
+# push a repo
+git push
+
+# to solve merging issues: reset to remote
+git reset --hard origin/HEAD

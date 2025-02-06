@@ -7,6 +7,8 @@ df <- read_raw(file = "01_raw/Wage.csv")
 dir.create("02_input")
 write_raw(df, file = "02_input/Wage_input")
 
+# more text
+
 # input
 df2 <- readRDS("02_input/Wage_input.rds")
 
